@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+  }
+  h1, h2, .font-festive {
+    font-family: 'Rozha One', 'Cinzel Decorative', serif;
+  }
+}
+
+/* Custom festive glow & shimmer styles */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF6D5 0%, #FFD700 35%, #FFA500 70%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-diwali-fire {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFE600 25%, #FF7700 65%, #FF1E00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box-gold-glow {
+  box-shadow: 0 0 25px rgba(255, 185, 0, 0.45), 0 0 60px rgba(255, 115, 0, 0.2), inset 0 0 15px rgba(255, 230, 100, 0.2);
+}
+
+.box-flame-glow {
+  box-shadow: 0 0 35px rgba(255, 90, 0, 0.6), 0 0 70px rgba(255, 40, 0, 0.35);
+}
+
+/* Diya flickering animation */
+@keyframes diyaFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    filter: drop-shadow(0 0 10px #ffb300) drop-shadow(0 -5px 18px #ff4500);
+  }
+  25% {
+    transform: scale(1.06, 0.96) rotate(1.5deg);
+    filter: drop-shadow(0 0 14px #ffc800) drop-shadow(0 -7px 24px #ff3300);
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-2deg);
+    filter: drop-shadow(0 0 9px #ff9500) drop-shadow(0 -4px 15px #e62e00);
+  }
+  75% {
+    transform: scale(1.04, 1.02) rotate(1deg);
+    filter: drop-shadow(0 0 16px #ffd54f) drop-shadow(0 -8px 26px #ff5722);
+  }
+}
+
+.animate-diya-flame {
+  animation: diyaFlicker 1.8s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Sparkle twinkle animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-twinkle {
+  animation: twinkle 2.5s infinite ease-in-out;
+}
+
+/* Fuse sparkle animation */
+@keyframes sparkBurn {
+  0% { transform: scale(1) translate(0, 0); opacity: 1; }
+  50% { transform: scale(1.4) translate(-2px, -3px); opacity: 0.9; }
+  100% { transform: scale(0.8) translate(1px, -5px); opacity: 0.3; }
+}
+
+.animate-spark-burn {
+  animation: sparkBurn 0.2s infinite alternate;
+}
+
+/* Screen shake for BOOM */
+@keyframes screenShake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-10px, 8px) rotate(-1deg); }
+  20% { transform: translate(12px, -10px) rotate(1.5deg); }
+  30% { transform: translate(-8px, -6px) rotate(-0.8deg); }
+  40% { transform: translate(8px, 6px) rotate(1deg); }
+  50% { transform: translate(-5px, 4px) rotate(-0.5deg); }
+  60% { transform: translate(4px, -3px) rotate(0.4deg); }
+  80% { transform: translate(-2px, 2px) rotate(-0.2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.screen-shake {
+  animation: screenShake 0.65s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Flash effect */
+@keyframes boomFlash {
+  0% { opacity: 0.95; }
+  100% { opacity: 0; }
+}
+
+.animate-boom-flash {
+  animation: boomFlash 0.5s ease-out forwards;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d061c;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb703;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fb8500;
+}
+
