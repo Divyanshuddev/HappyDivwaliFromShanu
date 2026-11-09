@@ -62,7 +62,7 @@ export default function App() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gold-gradient tracking-tight drop-shadow-md">
-          ✨ Happy Diwali from Shanu ✨
+          ✨ Happy Diwali from Shivam ✨
         </h1>
         <p className="text-sm sm:text-base text-amber-200/80 max-w-xl mx-auto mt-2 font-medium">
           Upload your face photo, light up the festival cracker, and watch the sparkling boom shower your face across the sky!
